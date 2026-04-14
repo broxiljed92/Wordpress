@@ -1,0 +1,219 @@
+/*
+Theme Name: Sneakers Theme
+Author: Ilias
+Description: Thème WordPress personnalisé sneakers
+Version: 1.0
+*/
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: #000;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1600180758890-6b94519a8ba4') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.hero h1 {
+    font-size: 60px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* BUTTON */
+.button, button {
+    background: white;
+    color: black;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #ddd;
+}
+
+/* TITRES */
+h2 {
+    text-align: center;
+    margin: 40px 0 20px;
+}
+
+/* PRODUITS (WooCommerce) */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.products li {
+    list-style: none;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.products li:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE PRODUIT */
+.products img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* TITRE PRODUIT */
+.woocommerce-loop-product__title {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* PRIX */
+.price {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+/* PAGE PRODUIT */
+.single-product {
+    padding: 40px;
+}
+
+.single-product img {
+    max-width: 100%;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #222;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+/* MODE JOUR */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* Header */
+body.light-mode header {
+    background: #f5f5f5;
+    color: #000;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Menu */
+body.light-mode nav a {
+    color: #000;
+}
+
+/* Produits */
+body.light-mode .products li {
+    background: #fff;
+    color: #000;
+}
+
+/* Boutons */
+body.light-mode .button {
+    background: black;
+    color: white;
+}
+
+/* Hero */
+body.light-mode .hero {
+    filter: brightness(0.9);
+}
